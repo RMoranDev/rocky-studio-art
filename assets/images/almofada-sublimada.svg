@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D14"/>
+    </linearGradient>
+    <linearGradient id="pillowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F3F4F6"/>
+      <stop offset="100%" stop-color="#E5E7EB"/>
+    </linearGradient>
+    <linearGradient id="pillowPrint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E600A9"/>
+      <stop offset="50%" stop-color="#00CFFF"/>
+      <stop offset="100%" stop-color="#FFE600"/>
+    </linearGradient>
+    <filter id="pillowShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="320" rx="16" fill="url(#bgGrad4)"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="265" rx="110" ry="16" fill="#000000" opacity="0.45"/>
+
+  <!-- Cushion Shape -->
+  <g filter="url(#pillowShadow)">
+    <path d="M 120,85 
+             Q 200,65 280,85 
+             Q 300,165 280,245 
+             Q 200,265 120,245 
+             Q 100,165 120,85 Z" 
+          fill="url(#pillowGrad)"/>
+    
+    <!-- Seam line -->
+    <path d="M 123,88 Q 200,69 277,88 Q 296,165 277,242 Q 200,261 123,242 Q 104,165 123,88 Z" 
+          fill="none" stroke="#D1D5DB" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Sublimation Artwork on Cushion -->
+  <g clip-path="url(#cushionClip)">
+    <clipPath id="cushionClip">
+      <rect x="135" y="95" width="130" height="140" rx="12"/>
+    </clipPath>
+    <rect x="135" y="95" width="130" height="140" fill="url(#pillowPrint)" opacity="0.9"/>
+    <!-- Heart / memory badge -->
+    <circle cx="200" cy="165" r="42" fill="#151820" opacity="0.8"/>
+    <path d="M 200,185 C 180,165 170,150 170,140 C 170,130 180,125 190,130 C 195,134 200,140 200,140 C 200,140 205,134 210,130 C 220,125 230,130 230,140 C 230,150 220,165 200,185 Z" fill="#E600A9"/>
+    <text x="200" y="196" font-family="'Manrope', sans-serif" font-weight="800" font-size="7" fill="#FFE600" text-anchor="middle" letter-spacing="1">MOMENTOS</text>
+  </g>
+
+  <!-- Corner tufts / 3D cushion creases -->
+  <path d="M 120,85 Q 150,115 170,130" stroke="#E5E7EB" stroke-width="2" fill="none"/>
+  <path d="M 280,85 Q 250,115 230,130" stroke="#E5E7EB" stroke-width="2" fill="none"/>
+  <path d="M 120,245 Q 150,215 170,200" stroke="#E5E7EB" stroke-width="2" fill="none"/>
+  <path d="M 280,245 Q 250,215 230,200" stroke="#E5E7EB" stroke-width="2" fill="none"/>
+</svg>

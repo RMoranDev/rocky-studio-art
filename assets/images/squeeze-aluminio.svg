@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D14"/>
+    </linearGradient>
+    <linearGradient id="bottleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5E7EB"/>
+      <stop offset="20%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#D1D5DB"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+    <linearGradient id="bottlePrint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CFFF"/>
+      <stop offset="50%" stop-color="#0B0D14"/>
+      <stop offset="100%" stop-color="#FFE600"/>
+    </linearGradient>
+    <filter id="bottleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="320" rx="16" fill="url(#bgGrad5)"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="275" rx="55" ry="14" fill="#000000" opacity="0.5"/>
+
+  <!-- Bottle Group -->
+  <g filter="url(#bottleShadow)">
+    <!-- Carabiner / Ring on cap -->
+    <path d="M 200,45 C 215,45 225,55 225,70 C 225,78 218,85 208,85" fill="none" stroke="#6B7280" stroke-width="5" stroke-linecap="round"/>
+    
+    <!-- Cap -->
+    <rect x="182" y="65" width="36" height="24" rx="4" fill="#1F2937"/>
+    <rect x="187" y="86" width="26" height="12" rx="2" fill="#374151"/>
+
+    <!-- Neck -->
+    <path d="M 185,98 L 180,120 L 220,120 L 215,98 Z" fill="#9CA3AF"/>
+
+    <!-- Bottle Body -->
+    <rect x="165" y="120" width="70" height="145" rx="14" fill="url(#bottleGrad)"/>
+    <path d="M 165,250 C 165,268 235,268 235,250 Z" fill="#9CA3AF"/>
+  </g>
+
+  <!-- Sublimation graphic wrap -->
+  <g clip-path="url(#squeezeClip)">
+    <clipPath id="squeezeClip">
+      <rect x="166" y="140" width="68" height="100" rx="4"/>
+    </clipPath>
+    <rect x="166" y="140" width="68" height="100" fill="url(#bottlePrint)"/>
+    <circle cx="200" cy="180" r="18" fill="#E600A9" opacity="0.85"/>
+    <text x="200" y="185" font-family="'Manrope', sans-serif" font-weight="900" font-size="9" fill="#FFFFFF" text-anchor="middle">SPORT</text>
+    <text x="200" y="215" font-family="'Manrope', sans-serif" font-weight="700" font-size="7" fill="#00CFFF" text-anchor="middle" letter-spacing="2">600ML</text>
+  </g>
+
+  <!-- Gloss Highlight -->
+  <path d="M 172,126 L 174,258" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+</svg>

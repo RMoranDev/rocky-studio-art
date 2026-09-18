@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D14"/>
+    </linearGradient>
+    <linearGradient id="photoPrint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CFFF"/>
+      <stop offset="50%" stop-color="#7928CA"/>
+      <stop offset="100%" stop-color="#E600A9"/>
+    </linearGradient>
+    <filter id="tileShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="320" rx="16" fill="url(#bgGrad6)"/>
+
+  <!-- Shadow below easel and tile -->
+  <ellipse cx="200" cy="275" rx="90" ry="14" fill="#000000" opacity="0.55"/>
+
+  <!-- Easel stand behind -->
+  <polygon points="196,80 204,80 215,270 185,270" fill="#1F242D"/>
+  <polygon points="135,160 145,155 130,270 120,270" fill="#292E3A"/>
+  <polygon points="265,160 255,155 270,270 280,270" fill="#292E3A"/>
+  <!-- Easel front bar -->
+  <rect x="110" y="235" width="180" height="10" rx="2" fill="#3E4554"/>
+
+  <!-- Ceramic Tile with perspective -->
+  <g filter="url(#tileShadow)">
+    <rect x="125" y="75" width="150" height="155" rx="6" fill="#FFFFFF"/>
+    <!-- Sublimation Photo Print on Tile -->
+    <rect x="133" y="83" width="134" height="139" rx="3" fill="url(#photoPrint)"/>
+    
+    <circle cx="200" cy="140" r="30" fill="#FFE600" opacity="0.9"/>
+    <path d="M 140,215 Q 170,165 200,195 Q 230,170 260,215 Z" fill="#151820"/>
+    <text x="200" y="145" font-family="'Manrope', sans-serif" font-weight="900" font-size="9" fill="#151820" text-anchor="middle">ROCKY</text>
+    <text x="200" y="178" font-family="'Manrope', sans-serif" font-weight="700" font-size="8" fill="#FFFFFF" text-anchor="middle">RECORDAÇÃO</text>
+    
+    <!-- Gloss shine / reflection across the tile -->
+    <polygon points="133,83 175,83 133,145" fill="#FFFFFF" opacity="0.4"/>
+  </g>
+</svg>

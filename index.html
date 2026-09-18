@@ -1,74 +1,952 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Produtos personalizados no Rocky Studio Art. Transforme suas ideias em lembranças especiais.">
+        content="Rocky Studio Art | Especialistas em canecas personalizadas, camisetas e lembranças estampadas por sublimação de alta definição. Sem quantidade mínima. Encomende pelo WhatsApp!">
+    <meta name="keywords"
+        content="sublimação, canecas personalizadas, camisetas personalizadas, brindes, presentes personalizados, lembranças sublimadas, estamparia">
+    <meta name="author" content="Rocky Studio Art">
 
-    <title>Rocky Studio Art | Personalizados</title>
+    <title>Rocky Studio Art | Canecas, Camisetas e Lembranças Sublimadas</title>
 
+    <!-- Google Fonts: DM Sans & Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Principal -->
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Script Principal -->
     <script src="js/script.js" defer></script>
 </head>
 
 <body>
 
-    <header>
-        <a href="#" class="logo">
-            Rocky Studio Art
-        </a>
+    <!-- =========================
+         Cabeçalho & Navegação
+         ========================= -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#inicio" class="logo" aria-label="Página inicial do Rocky Studio Art">
+                <img src="assets/images/rocky-studio-art-logo.png" alt="Logo Rocky Studio Art" class="logo-image">
+                <span class="logo-text">Rocky Studio <span class="logo-accent">Art</span></span>
+            </a>
 
-        <nav aria-label="Navegação principal">
-            <a href="#inicio">Início</a>
-            <a href="#produtos">Produtos</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
+            <!-- Navegação Desktop -->
+            <nav class="nav-menu" id="nav-menu" aria-label="Navegação principal">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#produtos" class="nav-link">Produtos</a>
+                <a href="#como-funciona" class="nav-link">Como Funciona</a>
+                <a href="#diferenciais" class="nav-link">Diferenciais</a>
+                <a href="#simulador" class="nav-link">Simulador</a>
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#depoimentos" class="nav-link">Avaliações</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rocky%20Studio%20Art%20e%20gostaria%20de%20um%20or%C3%A7amento." 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-header-cta" 
+                   id="header-whatsapp-cta">
+                    <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                    </svg>
+                    <span>Pedir Agora</span>
+                </a>
+
+                <!-- Botão Menu Mobile -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
     </header>
 
+    <!-- Menu Mobile Gaveta -->
+    <div class="mobile-drawer" id="mobile-drawer">
+        <nav class="mobile-nav">
+            <a href="#inicio" class="mobile-link">Início</a>
+            <a href="#produtos" class="mobile-link">Produtos</a>
+            <a href="#como-funciona" class="mobile-link">Como Funciona</a>
+            <a href="#diferenciais" class="mobile-link">Diferenciais</a>
+            <a href="#simulador" class="mobile-link">Simulador de Orçamento</a>
+            <a href="#sobre" class="mobile-link">Sobre o Estúdio</a>
+            <a href="#depoimentos" class="mobile-link">Avaliações</a>
+            <a href="#contato" class="mobile-link">Fale Conosco</a>
+        </nav>
+        <div class="mobile-drawer-cta">
+            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rocky%20Studio%20Art%20e%20quero%20um%20or%C3%A7amento." target="_blank" class="btn btn-primary btn-block">
+                Chamar no WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
     <main>
 
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Sua ideia ganha vida.</h1>
+        <!-- =========================
+             Hero Section
+             ========================= -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Estamparia & Sublimação de Alta Definição
+                    </div>
 
-                <p>
-                    Criamos lembranças personalizadas
-                    para momentos especiais.
-                </p>
+                    <h1 class="hero-title">
+                        Sua ideia ganha vida em <span class="gradient-text">cores vivas</span> e momentos inesquecíveis.
+                    </h1>
 
-                <a href="#contato" class="btn">
-                    Solicitar orçamento
-                </a>
+                    <p class="hero-description">
+                        Canecas térmicas e mágicas, camisetas com toque macio que não desbotam, squeezes, almofadas e lembranças exclusivas. Produção personalizada com tecnologia de sublimação profissional, sem pedido mínimo!
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#produtos" class="btn btn-primary">
+                            <span>Ver Produtos</span>
+                            <svg viewBox="0 0 20 20" width="18" height="18" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                        <a href="#simulador" class="btn btn-secondary">
+                            <span>Simular Orçamento</span>
+                        </a>
+                    </div>
+
+                    <!-- Selos de Confiança / Destaques -->
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <span class="trust-icon">✨</span>
+                            <span class="trust-text">Sem pedido mínimo (a partir de 1 un.)</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">🔥</span>
+                            <span class="trust-text">Estampa que não descasca e nem racha</span>
+                        </div>
+                        <div class="trust-item">
+                            <span class="trust-icon">📦</span>
+                            <span class="trust-text">Embalagem segura e envio ágil</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Visual Interativo Hero -->
+                <div class="hero-visual">
+                    <div class="hero-card-glow"></div>
+                    <div class="hero-card-container">
+                        <div class="hero-card-header">
+                            <span class="badge-tag">Destaque da Semana</span>
+                            <span class="status-indicator">✦ Resina Tripla AAA</span>
+                        </div>
+                        <div class="hero-showcase-image">
+                            <img src="assets/images/caneca-ceramica.svg" alt="Caneca Sublimada Rocky Studio Art" class="hero-img">
+                        </div>
+                        <div class="hero-card-details">
+                            <h3>Caneca de Cerâmica Premium</h3>
+                            <p>Cores vibrantes pelo processo térmico, brilho espelhado e 100% segura para micro-ondas.</p>
+                            <div class="hero-card-footer">
+                                <div class="price-box">
+                                    <span class="price-label">A partir de</span>
+                                    <span class="price-value">R$ 35,00</span>
+                                </div>
+                                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20a%20Caneca%20de%20Cer%C3%A2mica%20Premium." target="_blank" class="btn btn-sm btn-accent">
+                                    Personalizar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="produtos">
-            <h2>Nossos produtos</h2>
-            <!-- Vamos adicionar os produtos depois. -->
+        <!-- =========================
+             Seção de Produtos (Catálogo)
+             ========================= -->
+        <section id="produtos" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Catálogo Exclusivo</span>
+                <h2 class="section-title">Nossos Produtos Personalizados</h2>
+                <p class="section-subtitle">
+                    Escolha a categoria e explore itens estampados por sublimação com acabamento profissional para você, presentes ou empresas.
+                </p>
+
+                <!-- Filtros de Categoria -->
+                <div class="category-filters" role="tablist" aria-label="Filtrar por categoria">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="canecas">Canecas</button>
+                    <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                    <button class="filter-btn" data-filter="lembrancas">Lembranças</button>
+                    <button class="filter-btn" data-filter="brindes">Brindes & Squeezes</button>
+                </div>
+            </div>
+
+            <!-- Grid de Produtos -->
+            <div class="products-grid" id="products-grid">
+
+                <!-- 1. Caneca Cerâmica -->
+                <article class="product-card" data-category="canecas">
+                    <div class="card-badge badge-yellow">Mais Vendida</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/caneca-ceramica.svg" alt="Caneca de Cerâmica Branca" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Canecas</span>
+                        <h3 class="product-title">Caneca de Cerâmica 325ml</h3>
+                        <p class="product-desc">
+                            Cerâmica importada com resina AAA. Brilho impecável, cores fiéis e alta durabilidade no micro-ondas.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Capacidade de 325ml</li>
+                            <li>✓ Estampa em alta definição</li>
+                            <li>✓ Não desbota ao lavar</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 35,00</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20a%20Caneca%20de%20Cer%C3%A2mica%20325ml." target="_blank" class="btn btn-card-order" data-product="Caneca de Cerâmica 325ml">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 2. Caneca Mágica -->
+                <article class="product-card" data-category="canecas">
+                    <div class="card-badge badge-magenta">Surpresa</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/caneca-magica.svg" alt="Caneca Mágica Termossensível" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Canecas</span>
+                        <h3 class="product-title">Caneca Mágica Termossensível</h3>
+                        <p class="product-desc">
+                            Parece uma caneca preta fosca comum, mas ao despejar líquido quente a sua foto ou arte é revelada magicamente!
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Efeito térmico interativo</li>
+                            <li>✓ Acabamento preto acetinado</li>
+                            <li>✓ Perfeita para presentes criativos</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 49,90</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20a%20Caneca%20M%C3%A1gica%20Termossens%C3%ADvel." target="_blank" class="btn btn-card-order" data-product="Caneca Mágica Termossensível">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Camiseta Poliéster Toque Algodão -->
+                <article class="product-card" data-category="camisetas">
+                    <div class="card-badge badge-cyan">Toque Macio</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/camiseta-algodao.svg" alt="Camiseta Poliéster Toque de Algodão" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Camisetas</span>
+                        <h3 class="product-title">Camiseta Sublimada Spun Premium</h3>
+                        <p class="product-desc">
+                            Tecido de poliéster de altíssima fiação com toque idêntico ao algodão. A tinta funde na trama sem deixar relevo plástico.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Toque macio e confortável</li>
+                            <li>✓ Não encolhe e não precisa passar</li>
+                            <li>✓ Estampa penetrada nas fibras</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 54,90</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20a%20Camiseta%20Sublimada%20Spun%20Premium." target="_blank" class="btn btn-card-order" data-product="Camiseta Sublimada Spun Premium">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 4. Almofada Personalizada -->
+                <article class="product-card" data-category="lembrancas">
+                    <div class="card-badge badge-yellow">Conforto</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/almofada-sublimada.svg" alt="Almofada Decorativa Sublimada" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Lembranças</span>
+                        <h3 class="product-title">Almofada 40x40cm com Enchimento</h3>
+                        <p class="product-desc">
+                            Capa em tecido acetinado de toque aveludado, com zíper invisível para fácil lavagem e enchimento antialérgico fofinho.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Estampa fotográfica nítida</li>
+                            <li>✓ Zíper invisível e lavável</li>
+                            <li>✓ Enchimento em fibra siliconada</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 42,00</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20a%20Almofada%2040x40cm." target="_blank" class="btn btn-card-order" data-product="Almofada 40x40cm">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 5. Squeeze de Alumínio -->
+                <article class="product-card" data-category="brindes">
+                    <div class="card-badge badge-cyan">Dia a Dia</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/squeeze-aluminio.svg" alt="Squeeze de Alumínio 600ml" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Brindes & Squeezes</span>
+                        <h3 class="product-title">Squeeze de Alumínio 600ml</h3>
+                        <p class="product-desc">
+                            Garrafa leve, resistente e prática para academia, trabalho ou escola. Acompanha bico dosador e tampa com mosquetão.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Alumínio nobre resinado</li>
+                            <li>✓ Tampa rosqueável antivazamento</li>
+                            <li>✓ Estampa 360° em alta resolução</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 44,90</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20o%20Squeeze%20de%20Alum%C3%ADnio%20600ml." target="_blank" class="btn btn-card-order" data-product="Squeeze de Alumínio 600ml">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 6. Azulejo Fotográfico Decorativo -->
+                <article class="product-card" data-category="lembrancas">
+                    <div class="card-badge badge-magenta">Recordação</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/azulejo-decorativo.svg" alt="Azulejo Decorativo Esmaltado com Suporte" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Lembranças</span>
+                        <h3 class="product-title">Azulejo Decorativo 15x15 ou 20x20</h3>
+                        <p class="product-desc">
+                            Eternize fotos de família, casamentos ou homenagens em uma placa de porcelana esmaltada com brilho de espelho e suporte de mesa.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Porcelana legítima resinada</li>
+                            <li>✓ Acompanha suporte de mesa elegante</li>
+                            <li>✓ Fidelidade fotográfica e brilho</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">A partir de</span>
+                                <span class="price-amount">R$ 38,00</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20personalizar%20o%20Azulejo%20Decorativo." target="_blank" class="btn btn-card-order" data-product="Azulejo Decorativo">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 7. Kit Lembrança & Brindes Corporativos -->
+                <article class="product-card" data-category="brindes">
+                    <div class="card-badge badge-yellow">Corporativo</div>
+                    <div class="product-image-wrap">
+                        <img src="assets/images/kit-lembrancas.svg" alt="Kit Presente Personalizado Sublimado" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-cat">Brindes & Corporativo</span>
+                        <h3 class="product-title">Kit Presente & Brindes Corporativos</h3>
+                        <p class="product-desc">
+                            Combinações sob medida com caneca + chaveiro + caixinha temática. Ideal para datas comemorativas, eventos e empresas.
+                        </p>
+                        <ul class="product-features">
+                            <li>✓ Descontos progressivos em atacado</li>
+                            <li>✓ Embalagem com identidade visual</li>
+                            <li>✓ Envio de amostra virtual prévia</li>
+                        </ul>
+                        <div class="product-bottom">
+                            <div class="product-price">
+                                <span class="price-from">Sob consulta / a partir de</span>
+                                <span class="price-amount">R$ 58,00</span>
+                            </div>
+                            <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20or%C3%A7ar%20um%20Kit%20Presente%20ou%20Brindes%20Corporativos." target="_blank" class="btn btn-card-order" data-product="Kit Presente Corporativo">
+                                Pedir no Whats
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Banner Promocional / Atacado -->
+            <div class="wholesale-banner">
+                <div class="wholesale-content">
+                    <h3>Precisa de brindes para sua empresa, evento ou festa?</h3>
+                    <p>Produzimos lotes corporativos com preços especiais de atacado, padronização rigorosa de cores e emissão de nota.</p>
+                </div>
+                <div class="wholesale-action">
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Preciso%20de%20um%20or%C3%A7amento%20em%20quantidade%20para%20minha%20empresa/evento." target="_blank" class="btn btn-accent">
+                        Orçamento Empresarial
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre">
-            <h2>Sobre o Rocky Studio Art</h2>
-            <!-- Vamos adicionar a apresentação do estúdio. -->
+        <!-- =========================
+             Como Funciona (Etapas da Sublimação)
+             ========================= -->
+        <section id="como-funciona" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Passo a Passo</span>
+                <h2 class="section-title">Como Funciona Seu Pedido</h2>
+                <p class="section-subtitle">
+                    Transformar sua imaginação em um produto real é muito simples, rápido e transparente.
+                </p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Escolha o Produto</h3>
+                    <p class="step-desc">Selecione canecas, camisetas, squeezes, almofadas ou o item que melhor atende a sua necessidade.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Envie sua Ideia</h3>
+                    <p class="step-desc">Mande sua foto, logo ou frase pelo WhatsApp. Se não tiver arte pronta, nós criamos o layout sem complicação!</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Aprove o Mockup 3D</h3>
+                    <p class="step-desc">Enviamos uma simulação digital realista de como o produto ficará pronto antes de iniciar a prensa.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Prensagem & Sublimação</h3>
+                    <p class="step-desc">A arte é impressa com tintas fotográficas e fundida a mais de 200°C na cerâmica ou tecido com acabamento perfeito.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">05</div>
+                    <h3 class="step-title">Entrega com Carinho</h3>
+                    <p class="step-desc">Embalamos o produto com máxima proteção e despachamos rapidamente para você curtir ou presentear.</p>
+                </div>
+            </div>
         </section>
 
-        <section id="contato">
-            <h2>Vamos criar algo especial?</h2>
-            <!-- Vamos adicionar o contato pelo WhatsApp. -->
+        <!-- =========================
+             Diferenciais da Sublimação
+             ========================= -->
+        <section id="diferenciais" class="section-container bg-surface-alt">
+            <div class="section-header">
+                <span class="section-tag">Qualidade Imbatível</span>
+                <h2 class="section-title">Por Que a Sublimação é Superior?</h2>
+                <p class="section-subtitle">
+                    Entenda por que nossos produtos personalizados duram anos com aparência de novos.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon-wrap icon-cyan">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
+                        </svg>
+                    </div>
+                    <h3>Nunca Descasca ou Craquela</h3>
+                    <p>Ao contrário de adesivos ou silkscreen barato, a tinta de sublimação passa do estado sólido direto ao gasoso e se funde molecularmente à resina ou fibra.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap icon-magenta">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>
+                        </svg>
+                    </div>
+                    <h3>Cores Vivas e Resolução Fotográfica</h3>
+                    <p>Gradientes suaves, sombras e detalhes finos de fotos são reproduzidos com máxima fidelidade graças ao nosso perfil de cores ICC profissional.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap icon-yellow">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3l1.912 5.885h6.188l-5.006 3.637 1.912 5.885-5.006-3.637-5.006 3.637 1.912-5.885-5.006-3.637h6.188z"/>
+                        </svg>
+                    </div>
+                    <h3>Resina AAA & Fibras Especiais</h3>
+                    <p>Trabalhamos exclusivamente com canecas de cerâmica com resina premium e tecidos fiados para sublimação, garantindo toque zero e ultra maciez.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon-wrap icon-cyan">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3>Sem Quantidade Mínima</h3>
+                    <p>Quer presentear alguém especial com apenas 1 caneca ou camiseta exclusiva? Fazemos com o mesmo carinho e padrão de lotes corporativos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Simulador Interativo de Orçamento
+             ========================= -->
+        <section id="simulador" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Calculadora Express</span>
+                <h2 class="section-title">Simulador de Orçamento Interativo</h2>
+                <p class="section-subtitle">
+                    Escolha o produto e a quantidade para calcular na hora o valor estimado e os descontos por volume.
+                </p>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calc-form">
+                    <!-- Produto -->
+                    <div class="form-group">
+                        <label for="calc-product" class="form-label">Selecione o Produto:</label>
+                        <select id="calc-product" class="form-control">
+                            <option value="caneca-ceramica" data-price="35.00">Caneca de Cerâmica Branca (R$ 35,00 un.)</option>
+                            <option value="caneca-magica" data-price="49.90">Caneca Mágica Termossensível (R$ 49,90 un.)</option>
+                            <option value="camiseta-algodao" data-price="54.90">Camiseta Toque Algodão Spun (R$ 54,90 un.)</option>
+                            <option value="almofada" data-price="42.00">Almofada Personalizada 40x40 (R$ 42,00 un.)</option>
+                            <option value="squeeze" data-price="44.90">Squeeze de Alumínio 600ml (R$ 44,90 un.)</option>
+                            <option value="azulejo" data-price="38.00">Azulejo Decorativo com Suporte (R$ 38,00 un.)</option>
+                            <option value="kit" data-price="58.00">Kit Lembrança & Brindes (R$ 58,00 un.)</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantidade -->
+                    <div class="form-group">
+                        <div class="quantity-header">
+                            <label for="calc-qty" class="form-label">Quantidade de Unidades:</label>
+                            <span class="qty-badge" id="qty-display">1 unidade</span>
+                        </div>
+                        <input type="range" id="calc-qty-range" min="1" max="100" value="1" class="form-range">
+                        <div class="qty-quick-buttons">
+                            <button type="button" class="btn-qty" data-val="1">1</button>
+                            <button type="button" class="btn-qty" data-val="5">5</button>
+                            <button type="button" class="btn-qty" data-val="10">10</button>
+                            <button type="button" class="btn-qty" data-val="25">25</button>
+                            <button type="button" class="btn-qty" data-val="50">50</button>
+                            <button type="button" class="btn-qty" data-val="100">100</button>
+                        </div>
+                    </div>
+
+                    <!-- Tipo de Arte -->
+                    <div class="form-group">
+                        <label class="form-label">Situação da sua Arte / Estampa:</label>
+                        <div class="radio-options">
+                            <label class="radio-item">
+                                <input type="radio" name="calc-art" value="pronta" checked>
+                                <span>Já possuo a arte / foto pronta</span>
+                            </label>
+                            <label class="radio-item">
+                                <input type="radio" name="calc-art" value="ajustar">
+                                <span>Tenho fotos e ideias, preciso de ajuda com o design</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Painel de Resumo do Orçamento -->
+                <div class="calc-summary">
+                    <h3 class="summary-title">Resumo do Pedido</h3>
+                    
+                    <div class="summary-line">
+                        <span class="summary-label">Produto:</span>
+                        <span class="summary-val" id="summary-product-name">Caneca de Cerâmica Branca</span>
+                    </div>
+                    <div class="summary-line">
+                        <span class="summary-label">Quantidade:</span>
+                        <span class="summary-val" id="summary-qty">1 unidade</span>
+                    </div>
+                    <div class="summary-line">
+                        <span class="summary-label">Preço Unitário Base:</span>
+                        <span class="summary-val" id="summary-unit-price">R$ 35,00</span>
+                    </div>
+                    <div class="summary-line" id="discount-row" style="display: none;">
+                        <span class="summary-label text-yellow">Desconto Atacado:</span>
+                        <span class="summary-val text-yellow" id="summary-discount">- R$ 0,00 (0%)</span>
+                    </div>
+
+                    <div class="summary-divider"></div>
+
+                    <div class="summary-total-box">
+                        <span class="total-label">Total Estimado:</span>
+                        <span class="total-amount" id="summary-total">R$ 35,00</span>
+                    </div>
+
+                    <p class="summary-disclaimer">
+                        * Valor aproximado. Pode variar conforme solicitações especiais de arte ou frete.
+                    </p>
+
+                    <a href="#" id="btn-calc-whatsapp" target="_blank" class="btn btn-primary btn-block">
+                        <svg class="icon-svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                        </svg>
+                        <span>Enviar Este Orçamento no WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Sobre o Rocky Studio Art
+             ========================= -->
+        <section id="sobre" class="section-container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-tag">Nossa Trajetória</span>
+                    <h2 class="section-title">Paixão por Transformar Ideias em Arte</h2>
+                    <p>
+                        O <strong>Rocky Studio Art</strong> nasceu da união entre o design gráfico moderno e a paixão por criar lembranças com significado afetivo. Acreditamos que uma caneca de café pela manhã ou uma camiseta personalizada não são apenas itens: são memórias, homenagens e marcas de momentos especiais.
+                    </p>
+                    <p>
+                        Investimos continuamente em equipamentos de ponta, prensas térmicas de precisão e tintas especiais para que cada detalhe impresso vibre com nitidez, intensidade e fidelidade de cores impressionante.
+                    </p>
+
+                    <!-- Métricas -->
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-number">+2.500</span>
+                            <span class="stat-label">Produtos Entregues</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Cores Vivas & Durabilidade</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5.0 ★</span>
+                            <span class="stat-label">Avaliação dos Clientes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card-banner">
+                    <div class="about-badge-card">
+                        <div class="about-badge-icon">🎨</div>
+                        <h3>Estamparia Personalizada de Verdade</h3>
+                        <p>Cada peça é revisada individualmente antes do envio, com garantia de qualidade Rocky Studio Art.</p>
+                        <div class="cmyk-bars">
+                            <span class="cmyk-bar bar-c" title="Cyan"></span>
+                            <span class="cmyk-bar bar-m" title="Magenta"></span>
+                            <span class="cmyk-bar bar-y" title="Yellow"></span>
+                            <span class="cmyk-bar bar-k" title="Black"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Depoimentos / Avaliações
+             ========================= -->
+        <section id="depoimentos" class="section-container bg-surface-alt">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos Reais</span>
+                <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">
+                    A satisfação de quem confiou na qualidade da Rocky Studio Art para presentear ou impulsionar sua marca.
+                </p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Pedi 2 canecas mágicas com fotos da família para o aniversário dos meus pais. A reação deles ao colocar o café quente foi impagável! A imagem fica super nítida. Super recomendo!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="avatar-letter">M</div>
+                        <div>
+                            <h4>Mariana Silva</h4>
+                            <span>Canecas Mágicas Personalizadas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "Fizemos 40 camisetas para o evento da nossa empresa de tecnologia. O tecido é super leve, toque de algodão delicioso e a estampa com nossa logo ficou impecável. Chegou antes do prazo!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="avatar-letter">L</div>
+                        <div>
+                            <h4>Lucas Mendonça</h4>
+                            <span>Lote Corporativo de Camisetas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">
+                        "O atendimento no WhatsApp foi maravilhoso! Eu não tinha a arte montada, mandei apenas as fotos e frases, e eles criaram um layout lindo. O azulejo com suporte ficou perfeito na minha estante."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="avatar-letter">C</div>
+                        <div>
+                            <h4>Camila Ribeiro</h4>
+                            <span>Azulejo Fotográfico Decorativo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================
+             Dúvidas Frequentes (FAQ)
+             ========================= -->
+        <section id="faq" class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Tire Suas Dúvidas</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+                <p class="section-subtitle">
+                    Tudo o que você precisa saber sobre prazos, envio de artes e conservação dos produtos.
+                </p>
+            </div>
+
+            <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Preciso pedir uma quantidade mínima?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Não! Aqui você pode pedir a partir de <strong>apenas 1 unidade</strong> para presentear quem você ama, ou pedir dezenas/centenas com descontos especiais para eventos e empresas.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>E se eu não tiver a arte pronta para estampar?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Sem problemas! Você pode nos enviar suas fotos, frases ou ideias pelo WhatsApp. Nossa equipe prepara uma prévia virtual (mockup) para você aprovar antes de iniciarmos a produção.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>A estampa sai ou desbota ao lavar?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Não! Como utilizamos o processo de sublimação térmica com tintas de alta fixação, a estampa se funde na camada de resina da cerâmica ou nas fibras do tecido. Não descasca, não racha e não desbota em lavagens comuns (inclusive canecas podem ir ao micro-ondas).</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Qual é o prazo de produção e envio?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Para pedidos individuais (1 a 5 unidades), o prazo médio de produção é de <strong>1 a 3 dias úteis</strong> após a aprovação da arte. Para pedidos corporativos ou em lote, combinamos prazos ágeis conforme a quantidade.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">
+                        <span>Quais são as formas de pagamento aceitas?</span>
+                        <span class="faq-toggle-icon">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Aceitamos Pix (com confirmação instantânea), cartões de crédito em até 12x e boleto bancário para pedidos corporativos.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- =========================
+             Contato & Fale Conosco
+             ========================= -->
+        <section id="contato" class="section-container">
+            <div class="contact-card-box">
+                <div class="contact-info">
+                    <span class="section-tag">Fale Conosco</span>
+                    <h2 class="section-title">Vamos Criar Algo Especial?</h2>
+                    <p class="contact-intro">
+                        Tire suas dúvidas, solicite orçamentos personalizados ou envie sua ideia diretamente para nossa equipe.
+                    </p>
+
+                    <div class="contact-details-list">
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">💬</span>
+                            <div>
+                                <strong>WhatsApp Direto:</strong>
+                                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Rocky%20Studio%20Art." target="_blank">(11) 99999-9999</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">✉️</span>
+                            <div>
+                                <strong>E-mail Comercial:</strong>
+                                <a href="mailto:contato@rockystudioart.com.br">contato@rockystudioart.com.br</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">⏰</span>
+                            <div>
+                                <strong>Atendimento:</strong>
+                                <span>Segunda a Sexta das 09h às 18h | Sábado das 09h às 13h</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-detail-item">
+                            <span class="detail-icon">🚀</span>
+                            <div>
+                                <strong>Envio:</strong>
+                                <span>Entregamos para todo o Brasil com embalagens seguras contra quebra.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário de Mensagem Rápida -->
+                <div class="contact-form-box">
+                    <h3>Envie uma Mensagem</h3>
+                    <form id="quick-contact-form">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Seu Nome:</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Ex: Ana Silva" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-product" class="form-label">Produto de Interesse:</label>
+                            <select id="contact-product" class="form-control">
+                                <option value="Canecas Personalizadas">Canecas Personalizadas</option>
+                                <option value="Camisetas Sublimadas">Camisetas Sublimadas</option>
+                                <option value="Almofadas Decorativas">Almofadas Decorativas</option>
+                                <option value="Squeezes de Alumínio">Squeezes de Alumínio</option>
+                                <option value="Azulejos Fotográficos">Azulejos Fotográficos</option>
+                                <option value="Lotes Corporativos">Lotes Corporativos / Atacado</option>
+                                <option value="Outros / Dúvidas Gerais">Outros / Dúvidas Gerais</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-msg" class="form-label">Sua Mensagem / Ideia de Estampa:</label>
+                            <textarea id="contact-msg" class="form-control" rows="4" placeholder="Conte-nos como imagina sua peça ou tire sua dúvida..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Enviar pelo WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>
-            &copy; 2026 Rocky Studio Art.
-            Todos os direitos reservados.
-        </p>
+    <!-- =========================
+         Botão Flutuante do WhatsApp
+         ========================= -->
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Estou%20no%20site%20da%20Rocky%20Studio%20Art%20e%20gostaria%20de%20fazer%20um%20pedido." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp" 
+       id="floating-whatsapp"
+       aria-label="Falar conosco no WhatsApp">
+        <svg viewBox="0 0 24 24" width="30" height="30" fill="#FFFFFF">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="floating-tooltip">Chamar no WhatsApp</span>
+    </a>
+
+    <!-- =========================
+         Rodapé
+         ========================= -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand-col">
+                <a href="#inicio" class="logo">
+                    <img src="assets/images/rocky-studio-art-logo.png" alt="Rocky Studio Art" class="logo-image">
+                    <span class="logo-text">Rocky Studio <span class="logo-accent">Art</span></span>
+                </a>
+                <p class="footer-bio">
+                    Estamparia por sublimação de alto padrão. Canecas, camisetas, squeezes e presentes personalizados para momentos memoráveis.
+                </p>
+                <div class="footer-cmyk-line">
+                    <span class="cmyk-dot dot-c"></span>
+                    <span class="cmyk-dot dot-m"></span>
+                    <span class="cmyk-dot dot-y"></span>
+                    <span class="cmyk-dot dot-k"></span>
+                </div>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#produtos">Produtos Sublimados</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#simulador">Simulador de Orçamento</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Linhas de Produtos</h4>
+                <ul>
+                    <li><a href="#produtos">Canecas de Cerâmica & Mágicas</a></li>
+                    <li><a href="#produtos">Camisetas Spun & Dry-Fit</a></li>
+                    <li><a href="#produtos">Almofadas Decorativas 40x40</a></li>
+                    <li><a href="#produtos">Squeezes de Alumínio 600ml</a></li>
+                    <li><a href="#produtos">Azulejos de Porcelana & Brindes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-col">
+                <h4>Formas de Pagamento</h4>
+                <div class="payment-methods">
+                    <span class="payment-pill">Pix (Instantâneo)</span>
+                    <span class="payment-pill">Cartões de Crédito</span>
+                    <span class="payment-pill">Boleto Bancário</span>
+                </div>
+                <div class="security-note">
+                    🔒 Compra segura e atendimento direto pelo WhatsApp.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Rocky Studio Art. Todos os direitos reservados. Feito com tecnologia de sublimação de alta definição.</p>
+        </div>
     </footer>
 
 </body>
+
 </html>

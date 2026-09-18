@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D14"/>
+    </linearGradient>
+    <linearGradient id="mugBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="25%" stop-color="#F3F4F6"/>
+      <stop offset="70%" stop-color="#E5E7EB"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+    <linearGradient id="mugInside" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#D1D5DB"/>
+    </linearGradient>
+    <linearGradient id="subliPrint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CFFF"/>
+      <stop offset="50%" stop-color="#E600A9"/>
+      <stop offset="100%" stop-color="#FFE600"/>
+    </linearGradient>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="400" height="320" rx="16" fill="url(#bgGrad1)"/>
+  
+  <!-- Subtle circular aura -->
+  <circle cx="200" cy="160" r="100" fill="#00CFFF" opacity="0.08" filter="url(#neonGlow)"/>
+
+  <!-- Shadow below mug -->
+  <ellipse cx="190" cy="265" rx="85" ry="18" fill="#000000" opacity="0.5"/>
+
+  <!-- Handle (behind/side) -->
+  <path d="M 240,110 C 310,110 310,210 240,210" fill="none" stroke="#E5E7EB" stroke-width="26" stroke-linecap="round"/>
+  <path d="M 240,110 C 310,110 310,210 240,210" fill="none" stroke="#D1D5DB" stroke-width="16" stroke-linecap="round"/>
+
+  <!-- Mug Body -->
+  <g filter="url(#dropShadow)">
+    <path d="M 110,95 L 110,230 C 110,255 250,255 250,230 L 250,95 Z" fill="url(#mugBody)"/>
+    <!-- Top Rim Opening -->
+    <ellipse cx="180" cy="95" rx="70" ry="18" fill="url(#mugInside)"/>
+    <ellipse cx="180" cy="95" rx="66" ry="15" fill="#E5E7EB"/>
+  </g>
+
+  <!-- Sublimation Artwork on Mug -->
+  <g clip-path="url(#mugClip)">
+    <clipPath id="mugClip">
+      <path d="M 115,115 L 115,225 C 120,245 240,245 245,225 L 245,115 C 200,125 160,125 115,115 Z"/>
+    </clipPath>
+    <!-- Vibrant Sublimated Graphic -->
+    <rect x="110" y="110" width="140" height="135" fill="url(#subliPrint)" opacity="0.95"/>
+    <circle cx="180" cy="170" r="32" fill="#0B0D14" opacity="0.85"/>
+    <polygon points="180,145 192,185 158,160 202,160 168,185" fill="#FFE600"/>
+    <text x="180" y="210" font-family="'Manrope', sans-serif" font-weight="800" font-size="9" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ROCKY ART</text>
+  </g>
+
+  <!-- Specular Highlights for glossy finish -->
+  <path d="M 122,105 L 126,230" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+  <path d="M 134,110 L 136,225" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.3"/>
+</svg>

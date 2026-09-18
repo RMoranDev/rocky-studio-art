@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151820"/>
+      <stop offset="100%" stop-color="#0B0D14"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222631"/>
+      <stop offset="100%" stop-color="#12141A"/>
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00CFFF"/>
+      <stop offset="50%" stop-color="#E600A9"/>
+      <stop offset="100%" stop-color="#FFE600"/>
+    </linearGradient>
+    <filter id="boxShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="400" height="320" rx="16" fill="url(#bgGrad7)"/>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="270" rx="120" ry="18" fill="#000000" opacity="0.6"/>
+
+  <!-- Gift Box Base -->
+  <g filter="url(#boxShadow)">
+    <polygon points="80,140 200,195 320,140 200,90" fill="#2E3442"/>
+    <polygon points="80,140 200,195 200,265 80,210" fill="#1C202B"/>
+    <polygon points="200,195 320,140 320,210 200,265" fill="#151821"/>
+
+    <!-- Ribbon Vertical -->
+    <polygon points="188,144 200,149 200,265 188,260" fill="url(#ribbonGrad)"/>
+    <polygon points="200,149 212,144 212,260 200,265" fill="url(#ribbonGrad)"/>
+
+    <!-- Inside elements coming out (Mug + Keychain) -->
+    <!-- Mini Mug -->
+    <path d="M 130,100 L 130,150 C 130,165 180,165 180,150 L 180,100 Z" fill="#FFFFFF"/>
+    <ellipse cx="155" cy="100" rx="25" ry="7" fill="#E5E7EB"/>
+    <rect x="135" y="112" width="40" height="32" rx="3" fill="#00CFFF"/>
+
+    <!-- Acrylic Keychain -->
+    <circle cx="240" cy="130" r="24" fill="#E600A9" opacity="0.9"/>
+    <circle cx="240" cy="130" r="20" fill="#FFFFFF"/>
+    <polygon points="240,118 245,128 232,122 248,122 235,128" fill="#FFE600"/>
+    <circle cx="240" cy="100" r="6" fill="none" stroke="#9CA3AF" stroke-width="3"/>
+    <line x1="240" y1="106" x2="240" y2="114" stroke="#9CA3AF" stroke-width="3"/>
+  </g>
+
+  <text x="200" y="240" font-family="'Manrope', sans-serif" font-weight="900" font-size="10" fill="#FFE600" text-anchor="middle" letter-spacing="1">KIT PERSONALIZADO</text>
+</svg>
