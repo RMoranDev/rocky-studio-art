@@ -18,11 +18,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- CSS Principal -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS Principal com cache-busting -->
+    <link rel="stylesheet" href="css/style.css?v=2.1">
     
-    <!-- Script Principal -->
-    <script src="js/script.js" defer></script>
+    <!-- Script Principal com cache-busting -->
+    <script src="js/script.js?v=2.1" defer></script>
+
+    <!-- CSS crítico para prevenir imagens gigantes antes do carregamento completo -->
+    <style>
+        .logo-image {
+            width: 70px !important;
+            height: 70px !important;
+            max-width: 70px !important;
+            max-height: 70px !important;
+            object-fit: contain;
+            display: block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,7 +49,7 @@
     <header id="main-header">
         <div class="header-container">
             <a href="#inicio" class="logo" aria-label="Página inicial do Rocky Studio Art">
-                <img src="assets/images/rocky-studio-art-logo.png" alt="Logo Rocky Studio Art" class="logo-image">
+                <img src="assets/images/rocky-studio-art-logo.png" alt="Logo Rocky Studio Art" class="logo-image" width="70" height="70">
                 <span class="logo-text">Rocky Studio <span class="logo-accent">Art</span></span>
             </a>
 
@@ -150,7 +166,7 @@
                             <span class="status-indicator">✦ Resina Tripla AAA</span>
                         </div>
                         <div class="hero-showcase-image">
-                            <img src="assets/images/caneca-ceramica.svg" alt="Caneca Sublimada Rocky Studio Art" class="hero-img">
+                            <img src="assets/images/caneca-ceramica.svg" alt="Caneca Sublimada Rocky Studio Art" class="hero-img" width="400" height="260">
                         </div>
                         <div class="hero-card-details">
                             <h3>Caneca de Cerâmica Premium</h3>
@@ -198,7 +214,7 @@
                 <article class="product-card" data-category="canecas">
                     <div class="card-badge badge-yellow">Mais Vendida</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/caneca-ceramica.svg" alt="Caneca de Cerâmica Branca" loading="lazy">
+                        <img src="assets/images/caneca-ceramica.svg" alt="Caneca de Cerâmica Branca" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Canecas</span>
@@ -227,7 +243,7 @@
                 <article class="product-card" data-category="canecas">
                     <div class="card-badge badge-magenta">Surpresa</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/caneca-magica.svg" alt="Caneca Mágica Termossensível" loading="lazy">
+                        <img src="assets/images/caneca-magica.svg" alt="Caneca Mágica Termossensível" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Canecas</span>
@@ -256,7 +272,7 @@
                 <article class="product-card" data-category="camisetas">
                     <div class="card-badge badge-cyan">Toque Macio</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/camiseta-algodao.svg" alt="Camiseta Poliéster Toque de Algodão" loading="lazy">
+                        <img src="assets/images/camiseta-algodao.svg" alt="Camiseta Poliéster Toque de Algodão" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Camisetas</span>
@@ -285,7 +301,7 @@
                 <article class="product-card" data-category="lembrancas">
                     <div class="card-badge badge-yellow">Conforto</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/almofada-sublimada.svg" alt="Almofada Decorativa Sublimada" loading="lazy">
+                        <img src="assets/images/almofada-sublimada.svg" alt="Almofada Decorativa Sublimada" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Lembranças</span>
@@ -314,7 +330,7 @@
                 <article class="product-card" data-category="brindes">
                     <div class="card-badge badge-cyan">Dia a Dia</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/squeeze-aluminio.svg" alt="Squeeze de Alumínio 600ml" loading="lazy">
+                        <img src="assets/images/squeeze-aluminio.svg" alt="Squeeze de Alumínio 600ml" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Brindes & Squeezes</span>
@@ -343,7 +359,7 @@
                 <article class="product-card" data-category="lembrancas">
                     <div class="card-badge badge-magenta">Recordação</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/azulejo-decorativo.svg" alt="Azulejo Decorativo Esmaltado com Suporte" loading="lazy">
+                        <img src="assets/images/azulejo-decorativo.svg" alt="Azulejo Decorativo Esmaltado com Suporte" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Lembranças</span>
@@ -372,7 +388,7 @@
                 <article class="product-card" data-category="brindes">
                     <div class="card-badge badge-yellow">Corporativo</div>
                     <div class="product-image-wrap">
-                        <img src="assets/images/kit-lembrancas.svg" alt="Kit Presente Personalizado Sublimado" loading="lazy">
+                        <img src="assets/images/kit-lembrancas.svg" alt="Kit Presente Personalizado Sublimado" loading="lazy" width="400" height="220">
                     </div>
                     <div class="product-info">
                         <span class="product-cat">Brindes & Corporativo</span>
@@ -893,7 +909,7 @@
         <div class="footer-container">
             <div class="footer-brand-col">
                 <a href="#inicio" class="logo">
-                    <img src="assets/images/rocky-studio-art-logo.png" alt="Rocky Studio Art" class="logo-image">
+                    <img src="assets/images/rocky-studio-art-logo.png" alt="Rocky Studio Art" class="logo-image" width="70" height="70">
                     <span class="logo-text">Rocky Studio <span class="logo-accent">Art</span></span>
                 </a>
                 <p class="footer-bio">
