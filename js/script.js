@@ -8,7 +8,7 @@
 // ==========================================
 const CONFIG = {
     // Digite o número do WhatsApp com DDI (55) + DDD + Número, apenas dígitos:
-    whatsappNumber: '5511999999999',
+    whatsappNumber: '5541988506018',
     storeName: 'Rocky Studio Art'
 };
 
